@@ -17,8 +17,8 @@ public class TarjetaModel {
     @JoinColumn(name = "cuenta", nullable = false)
     private CuentaModel cuenta;
 
-    @Column(nullable = false)
-    private boolean tipoTarjeta;
+    @Column(nullable = false) // TRUE = CREDITO FALSE = DEBITO
+    private boolean credito;
 
 	public Long getId() {
 		return id;
@@ -43,6 +43,16 @@ public class TarjetaModel {
 	public void setCuenta(CuentaModel cuenta) {
 		this.cuenta = cuenta;
 	}
+
+	public boolean isCredito() {
+		return credito;
+	}
+
+	public void setCredito(boolean credito) {
+		this.credito = credito;
+	}
+
+	
 
 	
 
